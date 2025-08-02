@@ -3,8 +3,9 @@
 Este repositorio contiene un juego de aventura creado con **Java** y **Greenfoot** donde controlas un personaje, recoges llaves, evitas monstruos y avanzas niveles hasta enfrentarte al dragón final. 🐉
 
 
-```
+
 ## 📁 Estructura del Proyecto
+```
 /juegoMonstrous/
 ├── images/ ← Imágenes usadas en el juego
 ├── sounds/ ← Efectos de sonido
