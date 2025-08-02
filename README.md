@@ -48,6 +48,6 @@ Este repositorio contiene un juego de aventura creado con **Java** y **Greenfoot
 
 ## ⚠️ Nota importante
 Este juego fue desarrollado con **Greenfoot**, por lo que es necesario tener Greenfoot instalado para jugarlo.  
-Descárgalo aquí: [https://www.greenfoot.org](https://www.greenfoot.org)
+
 
 ---
