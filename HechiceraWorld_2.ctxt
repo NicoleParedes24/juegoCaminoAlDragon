@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=HechiceraWorld_2
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Personaje_World2\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=HechiceraWorld_2()
+comment10.params=
+comment10.target=int\ getNumDisparos()
+comment2.params=n\ vidas\ nivel
+comment2.target=HechiceraWorld_2(int,\ int,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ collPuerta()
+comment5.params=
+comment5.target=void\ caminarPuerta()
+comment6.params=
+comment6.target=void\ shootLlama()
+comment7.params=
+comment7.target=void\ colisionPerderVidas()
+comment8.params=
+comment8.target=void\ gravedad()
+comment9.params=
+comment9.target=void\ controlesTeclado()
+numComments=11

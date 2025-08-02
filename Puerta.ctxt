@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Puerta
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Puerta\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=w
+comment1.target=Puerta(MyWorld_Camino)
+comment2.params=w
+comment2.target=Puerta(MyWorld)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ collPuerta()
+comment5.params=
+comment5.target=void\ collPuertaCamino()
+numComments=6
