@@ -6,7 +6,7 @@ Este repositorio contiene un juego de aventura creado con **Java** y **Greenfoot
 
 ## 📁 Estructura del Proyecto
 ```
-/juegoMonstrous/
+/caminoAlDragon/
 ├── images/ ← Imágenes usadas en el juego
 ├── sounds/ ← Efectos de sonido
 ├── Dragon.java ← Código del dragón final
@@ -33,7 +33,7 @@ Este repositorio contiene un juego de aventura creado con **Java** y **Greenfoot
 ## 🚀 Cómo ejecutar el juego
 1. **Descarga o clona** este repositorio.  
 2. Abre **Greenfoot**.  
-3. Carga el proyecto desde la carpeta `juegoMonstrous`.  
+3. Carga el proyecto desde la carpeta `caminoAlDragon`.  
 4. Ejecuta la clase `MyWorld` para iniciar el juego.  
 
 ---
