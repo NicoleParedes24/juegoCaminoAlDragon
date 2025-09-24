@@ -22,7 +22,6 @@ public class Llave extends Actor
         Actor personaje=getOneIntersectingObject(Personaje.class);
         
         if(personaje !=null){
-           // Greenfoot.playSound("moneda.WAV");
             ((MyWorld)getWorld()).addNumLLaves();
             getWorld().removeObject(this);
         }

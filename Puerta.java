@@ -57,15 +57,6 @@ public class Puerta extends Actor
         Actor personaje =getOneIntersectingObject(HechiceraWorld_2.class);
         if(personaje !=null){
             Greenfoot.playSound("puerta.mp3");
-          
-           // System.out.println("CAMIINPoooo"+world.getSegundos());
-           // int vidas=((MyWorld)getWorld()).getNumVidas();
-            //int nivel=((MyWorld)getWorld()).getNivel();
-           // ((MyWorld)getWorld()).setWorld(true);
-            
-          //  Greenfoot.setWorld(new MyWorld_2());
-         // Greenfoot.setWorld(new MyWorld_2( (MyWorld_Camino)getWorld() ));
-          // Greenfoot.setWorld(new MyWorld_2(new MyWorld_Camino( ((MyWorld_Camino)getWorld()).getMyWorld()  ) ));
         }
         
     }

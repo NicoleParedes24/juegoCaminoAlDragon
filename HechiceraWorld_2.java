@@ -19,12 +19,6 @@ public class HechiceraWorld_2 extends Actor
     private int velocidadPersonajeX=3; // EJE X
     private int gravedad=3; // es para la gravedad
     int Y_ref=300; //ahi esta el suelo
-    //saltar
-    /*
-    private int gravedad=2;
-    private boolean jumping;
-    private int fuerzaSalto=20; //jumpStrenght*/
-    
     //IMAGENES DERECHA IZQ
     GreenfootImage img_izquierda;
     GreenfootImage img_derecha;
@@ -66,8 +60,6 @@ public class HechiceraWorld_2 extends Actor
         Actor p=getOneIntersectingObject(Puerta.class);
         if(p!=null){
          
-         
-            
             Greenfoot.setWorld(new MyWorld_2((MyWorld_Camino)getWorld()) );
         }
     }
@@ -86,35 +78,26 @@ public class HechiceraWorld_2 extends Actor
         int ejeX=getX();
         int ejeY=getY();
         if(!shootPresionado && numDisparos>0){
+            Greenfoot.playSound("hechizeraFuego.mp3");
             getWorld().addObject(new Llama_morada(0), ejeX, ejeY);
              shootPresionado=true;
-            // System.out.println("disparos: "+numDisparos);
              numDisparos--;
         }
            
-        
-        
-        
-    
     }
     
     
      public void colisionPerderVidas(){
         Actor actor=getOneIntersectingObject(Llama_Dragon.class);
-        // esto para los bordes
-        
-        //colision con hehcicera y fuego
         if(actor!=null){
             getWorld().removeObject(actor); // se elimina el fuego si choca con la hehcicera
              ((MyWorld_2)getWorld()).VidasPorCrear();
             ((MyWorld_2)getWorld()).restarVidas();
         }
-        
-        
-        
+             
     }
   
-   
+
     
     public void gravedad(){
         if(getY()<Y_ref){ //si es menor al y de referencia

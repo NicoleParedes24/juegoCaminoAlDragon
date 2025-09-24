@@ -33,8 +33,7 @@ public class Dragon extends Actor
                 numero-=10;
                 valor+=10;
                 frecuenciaFuegoDragon=0;
-            }
-            
+            } 
         }
         colisionLlama();
     }
@@ -43,6 +42,7 @@ public class Dragon extends Actor
     }
     public void lanzarFuego(){
         if(frecuenciaFuegoDragon%numero==0){
+            Greenfoot.playSound("fuegoDragon.mp3");
             getWorld().addObject(new Llama_Dragon(), getX()-100,getY()-30);
         }
     }
@@ -63,25 +63,16 @@ public class Dragon extends Actor
          
          
          if(!llegoPosicion){
+             
               posX=minLimiteX+Greenfoot.getRandomNumber(maxLimiteX-minLimiteX+1); //300 a 600
               posY=minLimiteY+Greenfoot.getRandomNumber(maxLimiteY-minLimiteY+1);
               llegoPosicion=true;
-           //   System.out.println("NEW POSICION: "+posX+" "+posY);
-         
          }
         //639-> posX get X=500
         if(posX==getX() && posY==getY()){
             llegoPosicion=false; // se hace uan nuvea pos
         }
-        
-      //  if(getX()!=posX || getY()!=posY ){// && si son diferentes al mimso tiempo           
-             // x=0 y=0  arriba izq
-             //x=600 y=0 arriba derecho
-             //x=600 y=400 abajo derecha
-             //x=0 y y=400 abajo izq
-             
-             
-          //  System.out.println("POSICION: "+getX()+" "+getY());
+
             if(posX>getX()){
                 setLocation(getX()+1, getY());
                 
@@ -95,8 +86,6 @@ public class Dragon extends Actor
             }else if(getY()>posY){
                 setLocation(getX(), getY()-1);
             }
-      //  }else{
-        //    llegoPosicion=false;
-        //}
+ 
     }
 }

@@ -34,13 +34,10 @@ public class MyWorld_2 extends World
     public MyWorld_2(MyWorld_Camino w){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-    
-        
         //soportes
         addSoportes();  
         //Personaje 2
         addObject(h2, 22, 310);
-
         // add dragon
         addObject(dragon, 500,200); //500 200
         addObject(new Llama_morada(1), 400,10);
@@ -51,9 +48,7 @@ public class MyWorld_2 extends World
         vidas();
     }
     public void act(){
-       
         tiempo++;
-        
          if(tiempo%55==0){
             segundos++;
            // System.out.println("segundos: "+segundos);
@@ -83,7 +78,6 @@ public class MyWorld_2 extends World
     }
     public void textoNivel(){
         showText(" "+h2.getNumDisparos(),420,13);
-        
         showText("Nivel: "+nivel,getWidth()/2,10);
         showText("Vida Dragon: "+dragon.getVidaDragon(),500,380);
         showText(String.format("%02d", minutos)+":"+String.format("%02d",segundos),56,16);
@@ -92,10 +86,8 @@ public class MyWorld_2 extends World
      public void vidas(){
         for(int i=0;i<this.numVidas;i++){
             Vidas_W2 v= new Vidas_W2();
-            addObject(v,510+i*30,15); // VA A ESTAR A LA IZQ
-           // xVidas=i+1;
-            listaVidas.add(v);
-           
+            addObject(v,510+i*30,15);
+            listaVidas.add(v); 
 
         }
     }
@@ -103,22 +95,16 @@ public class MyWorld_2 extends World
     public void addImgVidas(){
         if(numVidas<3){
             
-           // restarVidas();---
-           // System.out.println("x: "+(15+numVidas*30)+ "y: "+15);
             Vidas_W2 v= new Vidas_W2();
             addObject(v, 510+numVidas*30, 15);
             listaVidas.add(v);
             numVidas++;
             crearVida=false;
-            //xVidas++;
-            
-             
+    
         }
     }
      // SE GENERA UNA VIDA CUANDO SE PIERDE VIDAS
     public void crearVidas(){
-        
-        
         
         if(numVidas<3 && !crearVida && vidasPorCrear>0){
             //System.out.println("CREAR VIDA: "+crearVida);
@@ -132,27 +118,17 @@ public class MyWorld_2 extends World
             
         }
         
-        
-        /*
-        if(getNumVidas()>=3 ){
-            crearVida=false;
-        }*/
-        
     }
      //VIDAS
     public void VidasPorCrear(){
        vidasPorCrear++;
     }
      public void restarVidas(){
-        //si no esta vacio
-       // System.out.println(numVidas+"NUMERO DE VIDAS"+ listaVidas.size());
-        
+
         if(!this.listaVidas.isEmpty()){
             Vidas_W2 u=listaVidas.remove(listaVidas.size()-1);
-           // System.out.println(u.getX());
             removeObject(u);
             numVidas--;
-           // xVidas--;
         }
     }
     
@@ -166,22 +142,13 @@ public class MyWorld_2 extends World
         Soporte s4= new Soporte(480,350);
         
         Soporte s5= new Soporte(550,350);
-        
-       // Soporte s2= new Soporte(110,125);
-       // Soporte s3= new Soporte(255,210);
-      //   Soporte s4= new Soporte(344,375);
-      //  Soporte s5= new Soporte(595,275);   
-        
+    
         this.soportes.add(s1);
         this.soportes.add(s2); 
         this.soportes.add(s3);
         this.soportes.add(s4);
             
         this.soportes.add(s5);
-      //  this.soportes.add(s2);
-        //this.soportes.add(s3);
-      //  this.soportes.add(s4);
-       // this.soportes.add(s5);
         
         for(int i=0;i<this.soportes.size();i++){
             addObject(soportes.get(i), soportes.get(i).getCorX(),soportes.get(i).getCorY());
@@ -195,9 +162,8 @@ public class MyWorld_2 extends World
         
         showText("Ganastee !\n Numero de vidas: "+
         numVidas+"\nTiempo:"+minutos+":"+String.format("%02d", segundos) ,getWidth()/2,getHeight()/2);
-        
+         Greenfoot.playSound("ganar.mp3");
         Greenfoot.stop(); 
-       // Greenfoot.playSound("ganar.mp3");
         
     }
     public void juegoTerminado(){

@@ -23,16 +23,9 @@ public class Vidas extends Actor
     public void act()
     {
         // Add your action code here.
-        //crearVidas();
-        
-       // System.out.println("gett "+((MyWorld)getWorld()).getWorld());
-        
+ 
         colisionVidas(Personaje.class);
-        
-       // colisionVidas_2(HechiceraWorld_2.class);
-        
-        
-        
+ 
     }
     
     public void colisionVidas(Class clasePersonaje){
@@ -40,9 +33,7 @@ public class Vidas extends Actor
         if(personaje != null){
             ((MyWorld)getWorld()).addImgVidas();
             getWorld().removeObject(this);
-           
-            
-           
+ 
         }
     }
      public void colisionVidas_2(Class clasePersonaje){
@@ -58,25 +49,8 @@ public class Vidas extends Actor
     public void setWorld(boolean w){
         this.world1=w;
     }
-   /* public void crearVidas(){
-        if( ((MyWorld)getWorld()).getNumVidas()<=2 ){
-              System.out.println("ANT"+vidas);
-          if(vidas==false){
-               // vidas=true;
-                Vidas v = new Vidas();
-                getWorld().addObject(v, Greenfoot.getRandomNumber(getWorld().getWidth()), Greenfoot.getRandomNumber(getWorld().getHeight()));
-                
-                System.out.println("v "+vidas);
-                return;
-               
-            }
-        }else{
-            vidas=false;
-        }
-    }*/
+   
 
-    
-    //eliminar vidas
-    
+
      
 }

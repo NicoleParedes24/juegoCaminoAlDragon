@@ -29,8 +29,7 @@ public class Soporte extends Actor
     public void collSoporte(){
         Actor hechicera= getOneIntersectingObject(HechiceraWorld_2.class);
         if(hechicera != null){
-           // System.out.println("COLISION"+hechicera.getX()+" "+hechicera.getY()+"col_ "+getX()+" "+getY());
-            
+   
             setDetectarSoporte(true);
         }else{
             setDetectarSoporte(false);
@@ -43,7 +42,6 @@ public class Soporte extends Actor
         return this.detectarSoporte;
     }
     
-    //get set
     public int getCorX(){
         return this.x;
     }

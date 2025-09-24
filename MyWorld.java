@@ -37,12 +37,7 @@ public class MyWorld extends World
     public MyWorld()
     {
         super(600, 400, 1);
-        // Greenfoot.setWorld(new MyWorld_Camino(this));
-     //   Greenfoot.setWorld(new MyWorld_2(getNumVidas(), nivel));
-        //Monedas img al inicio
-      //  Moneda moneda = new Moneda();
-      //  addObject(moneda,536,16);
-        
+    
         //lave img al inicio 
         Llave llave=new Llave();
         addObject(llave, 450, 16);
@@ -55,6 +50,7 @@ public class MyWorld extends World
     }
 
     public void act(){
+        
         inciarMonstruos();
         
         showText("Nivel: "+nivel,getWidth()/2,10);
@@ -65,10 +61,9 @@ public class MyWorld extends World
 
             juegoTerminado();
         }
-       // System.out.println(tiempo+"t");
+    
        if(tiempo%55==0){
             segundos++;
-           // System.out.println("segundos: "+segundos);
         }
        
         if(segundos>=59){
@@ -86,10 +81,7 @@ public class MyWorld extends World
         crearVidas();
         generarLlave();
         verPuerta();
-       
-       // System.out.println(xVidas+"xvidad");
     }
-     //si es falso va al WORLD 1
     public void setWorld(boolean w){
         this.world_1=w;
     }
@@ -115,36 +107,25 @@ public class MyWorld extends World
         for(int i=0;i<this.numVidas;i++){
             Vidas v= new Vidas();
             addObject(v,15+i*30,15);
-           // xVidas=i+1;
             listaVidas.add(v);
-           
-
         }
     }
     
     //añadir vidas arriba IMAGEN
     public void addImgVidas(){
         if(numVidas<3){
-            
-           // restarVidas();---
-           // System.out.println("x: "+(15+numVidas*30)+ "y: "+15);
             Vidas v= new Vidas();
             addObject(v, 15+numVidas*30, 15);
             listaVidas.add(v);
             numVidas++;
             crearVida=false;
-            //xVidas++;
-            
-             
+
         }
     }
      // SE GENERA UNA VIDA CUANDO SE PIERDE VIDAS
     public void crearVidas(){
         
-        
-        
         if(getNumVidas()<3 && !crearVida && vidasPorCrear>0){
-            //System.out.println("CREAR VIDA: "+crearVida);
             contadorVida++;
             if(contadorVida>70){
                 addObject(new Vidas(), Greenfoot.getRandomNumber(getWidth()-100), Greenfoot.getRandomNumber(getHeight()-50)+50);
@@ -155,32 +136,19 @@ public class MyWorld extends World
             
         }
         
-        
-        /*
-        if(getNumVidas()>=3 ){
-            crearVida=false;
-        }*/
-        
     }
 
     
      public void restarVidas(){
-        //si no esta vacio
-       // System.out.println(numVidas+"NUMERO DE VIDAS"+ listaVidas.size());
-        
         if(!this.listaVidas.isEmpty()){
             Vidas u=listaVidas.remove(listaVidas.size()-1);
-           // System.out.println(u.getX());
             removeObject(u);
             numVidas--;
-           // xVidas--;
         }
     }
     public void inciarMonstruos(){
         tiempo++; 
-        //tiempo%intervalo==0
         if(tiempo%intervalo==0){
-            //numeroMon
             for(int i=0;i<numeroMon;i++) {
 
                 Mon mon=new Mon();
@@ -194,16 +162,7 @@ public class MyWorld extends World
                     
                 }else{
                     addObject(mon, x, y);
-                    //System.out.println("NO");
                 }
-                /*double distancia = Math.hypot(x - p.getX(), y - p.getY());
-
-                if (distancia > margen) {
-
-                } else {
-                addObject(mon, p.getX(), p.getY());
-                // No se crea porque está muy cerca del personaje
-                }*/
 
             }
         }

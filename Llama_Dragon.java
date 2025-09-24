@@ -35,10 +35,7 @@ public class Llama_Dragon extends Actor
             getWorld().removeObject(this);
            
         }
-        //colision con hehcicera y fuego
-       /* if(personaje!=null){
-            getWorld().removeObject(this); // se elimina el fuego si choca con la hehcicera
-        }*/
+   
         
     }
     

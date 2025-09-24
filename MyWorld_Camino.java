@@ -21,7 +21,7 @@ public class MyWorld_Camino extends World
     private int nivel=1;
     
     //VIDAS
-    private int numVidas=1; //se puede cambiar }
+    private int numVidas=1; 
     int numWorld=2;
     int tiempo=0;
     
@@ -48,12 +48,10 @@ public class MyWorld_Camino extends World
         return this.numWorld;
     }
     public void act(){
-     //   System.out.println("num"+getNumWorld());
         textoNivel();
         tiempo++;
         if(tiempo%55==0){
             segundos++;
-           // System.out.println("segundos: "+segundos);
         }
        
         if(segundos>=59){
@@ -67,9 +65,7 @@ public class MyWorld_Camino extends World
     }
     
      public void textoNivel(){
-        
         showText("Nivel: "+nivel,getWidth()/2,10);
-      
         showText(String.format("%02d", minutos)+":"+String.format("%02d",segundos),56,16);
     }
      

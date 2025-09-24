@@ -30,10 +30,6 @@ public class Personaje extends Actor
     GreenfootImage img_derecha;
     
     public Personaje(){
-        //GreenfootImage imag= getImage();
-       // imag.scale(70,70);
-       // this.setImage(imag);
-        
        this.img_derecha= new GreenfootImage("personaje_derecha_80.png");
        this.img_izquierda= new GreenfootImage("personaje_izquierda_80.png");
     
@@ -73,9 +69,8 @@ public class Personaje extends Actor
                   if(!presionando &&disparosPermitidos>0){
                       
                     Fuego f = new Fuego(rotation);
-                    Greenfoot.playSound("fuego.mp3");
+                    Greenfoot.playSound("disparo.mp3");
                     getWorld().addObject(f,getX(),getY());
-                    //System.out.println("se agrero fuego en "+getX()+" "+getY());
                     disparosPermitidos--;
                     presionando=true; // aqui ya esta siendo presionada=true
                   }
@@ -134,20 +129,7 @@ public class Personaje extends Actor
             ((MyWorld)getWorld()).restarVidas();
             
         }
-        /* List<Mon> Moncolisionando = getIntersectingObjects(Mon.class);
-         Mon monstruo= new Mon();
-         //si toca por primera VEZ
-         for(Mon m:Moncolisionando){
-            if(Mon_eliminados.contains(m)){
-                //si contiene no eliminar
-            }else{
-                ((MyWorld)getWorld()).restarVidas();
-                
-                monstruo=m;
-                Mon_eliminados.add(m);
-            
-            }
-        }*/
+   
     
     }
 }

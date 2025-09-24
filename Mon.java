@@ -73,10 +73,6 @@ public class Mon extends Actor
         }
         setLocation(mx2,my2); //set
        
-        //eliminar si le toca el fuego
-          
-       //remove();
-       
         cont++;
         monstruoRojoVerde();    
        
@@ -95,14 +91,11 @@ public class Mon extends Actor
             if(cont>=10 ){
                
                 if(estadoRojo){
-                  //  setImage("mRojo.png");
                    setImage("R1.png");
                 }else {
-                   // setImage("MonstruoVer.png");
                    setImage("V1.png");
                
                 }
-                // getImage().scale(40, 40);
                 estadoRojo=!estadoRojo;
                 cont=0;
             }
@@ -113,7 +106,7 @@ public class Mon extends Actor
         
         
        if(this.frecuenciaRojo>400 && rojo==false){  //diferente true
-           // setImage("mRojo.png");
+
            setImage("R1.png");
             rojo=true;
        }
@@ -152,10 +145,6 @@ public class Mon extends Actor
             yR--;
             setLocation(xR, yR);
         }
-       // System.out.println("PERSONAJE X Y: "+xP+" "+yP);
-       // System.out.println("MONSTRUO: "+xR+" "+yR);
-
-        //actualizar de nuevo
         setLocation(xR, yR);
             
            
